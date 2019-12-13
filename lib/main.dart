@@ -1,6 +1,7 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/bloc/cartlistBloc.dart';
+import 'package:food_delivery/model/fooditem.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,10 +26,34 @@ class Home extends StatelessWidget {
       body: SafeArea(
         child: Container(
           child: ListView(
-            children: <Widget>[FirstHalf()],
+            children: <Widget>[
+              FirstHalf(),
+              SizedBox(height: 45),
+              for (var foodItem in fooditemList.foodItems)
+                ItemContainer(foodItem: foodItem)
+            ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class ItemContainer extends StatelessWidget {
+  final FoodItem foodItem;
+
+  ItemContainer({@required this.foodItem});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {},
+      child: Items(
+          hotel: foodItem.hotel,
+          itemName: foodItem.title,
+          itemPrice: foodItem.price,
+          imgUrl: foodItem.imgUrl,
+          leftAligned: (foodItem.id % 2) == 0 ? true : false),
     );
   }
 }
