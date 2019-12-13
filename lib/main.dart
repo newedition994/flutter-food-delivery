@@ -56,9 +56,16 @@ class CustomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Icon(Icons.menu),
-          Container(
-            margin: EdgeInsets.only(right: 30),
-            child: Text("0"),
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              margin: EdgeInsets.only(right: 30),
+              child: Text("0"),
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                  color: Colors.pink[600],
+                  borderRadius: BorderRadius.circular(50)),
+            ),
           )
         ],
       ),
