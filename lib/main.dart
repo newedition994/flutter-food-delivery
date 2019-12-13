@@ -41,8 +41,32 @@ class FirstHalf extends StatelessWidget {
       child: Column(
         children: <Widget>[
           CustomAppBar(),
+          SizedBox(height: 30),
+          title(),
+          SizedBox(height: 30),
         ],
       ),
+    );
+  }
+
+  Widget title() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        SizedBox(width: 45),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text("Food",
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 30,
+                )),
+            Text("Delivery",
+                style: TextStyle(fontWeight: FontWeight.w200, fontSize: 30))
+          ],
+        )
+      ],
     );
   }
 }
