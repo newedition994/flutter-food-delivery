@@ -58,6 +58,26 @@ class ItemContainer extends StatelessWidget {
   }
 }
 
+class Items extends StatelessWidget {
+  Items(
+      {@required this.leftAligned,
+      this.imgUrl,
+      this.hotel,
+      this.itemName,
+      this.itemPrice});
+
+  final bool leftAligned;
+  final String imgUrl;
+  final String itemName;
+  final double itemPrice;
+  final String hotel;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
 class FirstHalf extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
