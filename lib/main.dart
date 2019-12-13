@@ -25,13 +25,11 @@ class Home extends StatelessWidget {
       body: SafeArea(
         child: Container(
           child: ListView(
-            children: <Widget>[
-              FirstHalf();
-            ],
+            children: <Widget>[FirstHalf()],
           ),
         ),
       ),
-    )
+    );
   }
 }
 
