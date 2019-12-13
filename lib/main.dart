@@ -66,6 +66,24 @@ class FirstHalf extends StatelessWidget {
           ),
           CategoryListItem(
             categoryIcon: Icons.bug_report,
+            categoryName: "Pizza",
+            availability: 12,
+            selected: false,
+          ),
+          CategoryListItem(
+            categoryIcon: Icons.bug_report,
+            categoryName: "Rolls",
+            availability: 12,
+            selected: false,
+          ),
+          CategoryListItem(
+            categoryIcon: Icons.bug_report,
+            categoryName: "Burgers",
+            availability: 12,
+            selected: false,
+          ),
+          CategoryListItem(
+            categoryIcon: Icons.bug_report,
             categoryName: "Burgers",
             availability: 12,
             selected: false,
@@ -198,7 +216,16 @@ class CategoryListItem extends StatelessWidget {
               fontWeight: FontWeight.w700,
               color: Colors.black,
             ),
-          )
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
+            width: 1.5,
+            height: 15,
+            color: Colors.black26,
+          ),
+          Text(availability.toString(),
+              style:
+                  TextStyle(fontWeight: FontWeight.w600, color: Colors.black)),
         ],
       ),
     );
