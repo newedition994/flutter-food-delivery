@@ -162,11 +162,44 @@ class CategoryListItem extends StatelessWidget {
       margin: EdgeInsets.only(right: 20),
       padding: EdgeInsets.fromLTRB(10, 10, 10, 20),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50),
-        color: selected ? Colors.deepPurple[400] : Colors.white,
-        border: Border.all(
-            color: selected ? Colors.transparent : Colors.grey[200],
-            width: 1.5),
+          borderRadius: BorderRadius.circular(50),
+          color: selected ? Colors.deepPurple[400] : Colors.white,
+          border: Border.all(
+              color: selected ? Colors.transparent : Colors.grey[200],
+              width: 1.5),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.grey[100],
+                blurRadius: 15,
+                offset: Offset(25, 0),
+                spreadRadius: 5)
+          ]),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50),
+                border: Border.all(
+                    color: selected ? Colors.transparent : Colors.grey,
+                    width: 1.5)),
+            child: Icon(
+              categoryIcon,
+              color: Colors.black,
+              size: 30,
+            ),
+          ),
+          SizedBox(height: 10),
+          Text(
+            categoryName,
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.black,
+            ),
+          )
+        ],
       ),
     );
   }
