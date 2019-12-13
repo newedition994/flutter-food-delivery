@@ -74,7 +74,35 @@ class Items extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    double containerPadding = 45;
+    double containerBorderRadius = 10;
+
+    return Column(
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.only(
+            left: leftAligned ? 0 : containerPadding,
+            right: leftAligned ? containerPadding : 0,
+          ),
+          child: Column(
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                height: 200,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.horizontal(
+                      left: leftAligned
+                          ? Radius.circular(0)
+                          : Radius.circular(containerBorderRadius)),
+                ),
+              )
+            ],
+          ),
+        )
+      ],
+    );
   }
 }
 
