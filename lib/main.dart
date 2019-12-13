@@ -7,7 +7,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Food Delivery",
-      home: Scaffold(),
+      theme: ThemeData(primaryColor: Colors.deepOrange[600]),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Food Delivery'),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
     );
   }
