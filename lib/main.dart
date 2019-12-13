@@ -45,6 +45,31 @@ class FirstHalf extends StatelessWidget {
           title(),
           SizedBox(height: 30),
           searchBar(),
+          SizedBox(height: 30),
+          categories(),
+        ],
+      ),
+    );
+  }
+
+  Widget categories() {
+    return Container(
+      height: 185,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          CategoryListItem(
+            categoryIcon: Icons.bug_report,
+            categoryName: "Burgers",
+            availability: 12,
+            selected: true,
+          ),
+          CategoryListItem(
+            categoryIcon: Icons.bug_report,
+            categoryName: "Burgers",
+            availability: 12,
+            selected: false,
+          ),
         ],
       ),
     );
