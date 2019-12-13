@@ -143,3 +143,31 @@ class CustomAppBar extends StatelessWidget {
     );
   }
 }
+
+class CategoryListItem extends StatelessWidget {
+  final IconData categoryIcon;
+  final String categoryName;
+  final int availability;
+  final bool selected;
+
+  CategoryListItem(
+      {@required this.categoryIcon,
+      @required this.categoryName,
+      @required this.availability,
+      @required this.selected});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(right: 20),
+      padding: EdgeInsets.fromLTRB(10, 10, 10, 20),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+        color: selected ? Colors.deepPurple[400] : Colors.white,
+        border: Border.all(
+            color: selected ? Colors.transparent : Colors.grey[200],
+            width: 1.5),
+      ),
+    );
+  }
+}
