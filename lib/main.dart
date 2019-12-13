@@ -100,6 +100,14 @@ class Items extends StatelessWidget {
                         ? Radius.circular(containerBorderRadius)
                         : Radius.circular(0),
                   ),
+                  child: Image.network(imgUrl, fit: BoxFit.fill),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.only(
+                  left: leftAligned ? 20 : 0,
+                  right: leftAligned ? 0 : 20,
                 ),
               )
             ],
