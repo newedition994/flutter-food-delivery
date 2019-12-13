@@ -93,9 +93,13 @@ class Items extends StatelessWidget {
                     BoxDecoration(borderRadius: BorderRadius.circular(10)),
                 child: ClipRRect(
                   borderRadius: BorderRadius.horizontal(
-                      left: leftAligned
-                          ? Radius.circular(0)
-                          : Radius.circular(containerBorderRadius)),
+                    left: leftAligned
+                        ? Radius.circular(0)
+                        : Radius.circular(containerBorderRadius),
+                    right: leftAligned
+                        ? Radius.circular(containerBorderRadius)
+                        : Radius.circular(0),
+                  ),
                 ),
               )
             ],
